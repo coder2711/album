@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Family Album</title>
+        <style>
+            body{
+                text-align: center;
+            }
+            img{
+               height: 300px;
+               width: 300px; 
+            }
+        </style>
+    </head>
+    <body>
+        <H1>Family Album</H1>
+        <img id="album" src="https://images-na.ssl-images-amazon.com/images/I/519EK1CK07L.jpg">
+        <H2 id="names">Family Album</H2>
+        <button onclick="next()">Next</button>
+        <script>
+            var pic=["https://pbs.twimg.com/profile_images/923451113239703552/62jMMnTQ_400x400.jpg","https://i.pinimg.com/736x/c1/a9/b2/c1a9b2512b29182b99fa3052c5f37e85.jpg","https://thumbs.dreamstime.com/b/adorable-cute-young-girl-cartoon-adorable-cute-young-student-girl-wearing-backpack-happy-childhood-cartoon-vector-illustration-153486513.jpg","https://cdn1.vectorstock.com/i/1000x1000/60/35/cartoon-young-boy-vector-996035.jpg","https://images-na.ssl-images-amazon.com/images/I/519EK1CK07L.jpg"];
+            var value=["Waibhav Kale","Amrata Kale","Radhika Kale","Vedant Kale","Family Album"];
+            var i="0";
+            function next(){
+                document.getElementById("album").src=pic[i];
+                document.getElementById("names").innerHTML=value[i]
+                i++;
+                if (i==5)
+                {
+                    i=0
+                }
+            }
+        </script>
+    </body>
+</html>
